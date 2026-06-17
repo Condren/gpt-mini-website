@@ -1,0 +1,44 @@
+:root{--accent:#0ea5a4;--muted:#6b7280;--bg:#f8fafc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Arial;background:var(--bg);color:#0f172a;line-height:1.45}
+.container{max-width:1000px;margin:0 auto;padding:16px}
+
+/* header */
+.site-header{background:#fff;border-bottom:1px solid #e6e9ee;position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;gap:12px;padding:12px 0}
+.logo{text-decoration:none;color:var(--accent);font-weight:700}
+.main-nav{margin-left:auto;display:flex;gap:12px}
+.main-nav a{text-decoration:none;color:var(--muted);padding:8px;border-radius:6px}
+.menu-icon{display:none}
+
+/* hero */
+.hero{padding:32px 0}
+.hero-copy h1{font-size:1.6rem;margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:12px}
+.btn{background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+
+/* gallery */
+.grid-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.thumb{width:100%;height:160px;object-fit:cover;display:block;border-radius:8px;cursor:pointer}
+
+/* modal */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);align-items:center;justify-content:center;z-index:80;padding:20px}
+.modal img{max-width:96%;max-height:90vh;border-radius:8px}
+.modal-close{position:absolute;top:18px;right:18px;background:#fff;border:0;padding:6px 10px;border-radius:6px;cursor:pointer}
+
+/* contact */
+.contact{padding:18px 0}
+.contact-form{background:#fff;padding:14px;border-radius:8px;border:1px solid #e6e9ee}
+.contact-form label{display:flex;flex-direction:column;margin-bottom:10px;font-size:0.95rem}
+.contact-form input,.contact-form textarea,.contact-form select{padding:8px;border:1px solid #e6e9ee;border-radius:6px}
+.form-msg{margin-top:10px;color:green}
+
+/* responsive */
+@media(max-width:760px){
+  .main-nav{display:none}
+  .menu-icon{display:block;margin-left:auto}
+  .grid-gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:420px){
+  .grid-gallery{grid-template-columns:1fr}
+}

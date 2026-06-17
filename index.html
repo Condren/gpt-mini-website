@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Model Site — HTML CSS JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">MyModelJS</a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="menuBtn" class="menu-icon" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="heroTitle">Sites that come alive with JS</h1>
+          <p class="lead">HTML & CSS set the stage — JS makes it interactive.</p>
+          <a class="btn" href="#features">Explore features</a>
+        </div>
+
+        <div class="hero-media">
+          <img src="https://via.placeholder.com/560x360?text=Hero+Image" alt="Hero preview" />
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <h2 class="section-title">Interactive Features</h2>
+      <div class="cards" id="cards">
+        <article class="card"> <h3>Mobile menu</h3><p>Toggle and auto-close on link click.</p></article>
+        <article class="card"> <h3>Gallery</h3><p>Click thumbnail to open modal controlled by JS.</p></article>
+        <article class="card"> <h3>Form validation</h3><p>Validate before sending and show messages.</p></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery container">
+      <h2 class="section-title">Gallery (JS lightbox)</h2>
+      <div class="grid-gallery" id="gridGallery">
+        <img data-full="https://via.placeholder.com/1000x700?text=1+large" src="https://via.placeholder.com/400x300?text=1" alt="1" class="thumb">
+        <img data-full="https://via.placeholder.com/1000x700?text=2+large" src="https://via.placeholder.com/400x300?text=2" alt="2" class="thumb">
+        <img data-full="https://via.placeholder.com/1000x700?text=3+large" src="https://via.placeholder.com/400x300?text=3" alt="3" class="thumb">
+        <img data-full="https://via.placeholder.com/1000x700?text=4+large" src="https://via.placeholder.com/400x300?text=4" alt="4" class="thumb">
+        <img data-full="https://via.placeholder.com/1000x700?text=5+large" src="https://via.placeholder.com/400x300?text=5" alt="5" class="thumb">
+        <img data-full="https://via.placeholder.com/1000x700?text=6+large" src="https://via.placeholder.com/400x300?text=6" alt="6" class="thumb">
+      </div>
+
+      <!-- JS modal -->
+      <div id="modal" class="modal" aria-hidden="true">
+        <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+        <img id="modalImg" src="" alt="Expanded image">
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+
+      <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+        <label>Full name
+          <input id="fullname" type="text" name="fullname" required />
+        </label>
+
+        <label>Email
+          <input id="email" type="email" name="email" required />
+        </label>
+
+        <label>Age
+          <select id="age" name="age" required>
+            <option value="">Select</option>
+            <option>10</option><option>11</option><option>12</option>
+            <option>13</option><option>14</option><option>15</option>
+            <option>16</option><option>17</option><option>18</option>
+            <option>19</option><option>20</option>
+          </select>
+        </label>
+
+        <label>Message
+          <textarea id="message" name="message" rows="4"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit</button>
+          <button type="reset" class="btn alt">Reset</button>
+        </div>
+
+        <p id="formMsg" class="form-msg" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; 2025 MyModelJS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
